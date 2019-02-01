@@ -1,0 +1,705 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f814cd0c0ad, pid=16483, tid=140192989259520
+#
+# JRE version: OpenJDK Runtime Environment (7.0_181-b01) (build 1.7.0_181-b01)
+# Java VM: OpenJDK 64-Bit Server VM (24.181-b01 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea 2.6.14
+# Distribution: Ubuntu 14.04 LTS, package 7u181-2.6.14-0ubuntu0.3
+# Problematic frame:
+# C  [libzip.so+0x50ad]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f8148646000):  JavaThread "MainThread" [_thread_in_native, id=16500, stack(0x00007f8139432000,0x00007f8139533000)]
+
+siginfo:si_signo=SIGBUS: si_errno=0, si_code=2 (BUS_ADRERR), si_addr=0x00007f813b0eaa65
+
+Registers:
+RAX=0x00007f81285577b0, RBX=0x00007f814813dba0, RCX=0x00007f8128000020, RDX=0x00007f81285577b0
+RSP=0x00007f813952b080, RBP=0x00007f813952b0e0, RSI=0x00000000000002c0, RDI=0x00007f8128000020
+R8 =0x0000000000000003, R9 =0x00007f8128000078, R10=0x00007f8145086d58, R11=0x0000000000000028
+R12=0x00007f8148182de8, R13=0x00007f813b0eaa48, R14=0x00007f81285577b0, R15=0x000000002c9b7a35
+RIP=0x00007f814cd0c0ad, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f813952b080)
+0x00007f813952b080:   00007f813952b4e0 00007f814cd0aaa8
+0x00007f813952b090:   0000003000000010 000000003952b7a0
+0x00007f813952b0a0:   00007f813952b6c0 00007f814ed564ce
+0x00007f813952b0b0:   00007f813952b150 00007f8148182de0
+0x00007f813952b0c0:   00007f814813dba0 00007f813952b150
+0x00007f813952b0d0:   00007f81285587c0 000000002c9b7a35
+0x00007f813952b0e0:   00007f813952b130 00007f814cd0ce5d
+0x00007f813952b0f0:   00007f813952b220 0000002800000000
+0x00007f813952b100:   00007f8100000000 00007f813952b150
+0x00007f813952b110:   00007f813952b5a8 00007f813952b150
+0x00007f813952b120:   0000000000000028 00007f81486461d8
+0x00007f813952b130:   00007f813952b590 00007f814cd0aaa8
+0x00007f813952b140:   0000000100000000 00007f814813dba0
+0x00007f813952b150:   687479702f67726f 6c75646f6d2f6e6f
+0x00007f813952b160:   4d2f6572732f7365 656a624f68637461
+0x00007f813952b170:   7373616c632e7463 0000000000000000
+0x00007f813952b180:   0000000000000000 0000000000000004
+0x00007f813952b190:   ffffffffffffffff 0000000000000025
+0x00007f813952b1a0:   0020000000000000 0000000000000000
+0x00007f813952b1b0:   ffffffffffffffff 00007f814ef5c039
+0x00007f813952b1c0:   0000000000000000 0000000000000025
+0x00007f813952b1d0:   00007f814ef5c03b 00007f814ef4850c
+0x00007f813952b1e0:   0000000000000000 00007f8100000020
+0x00007f813952b1f0:   00007f814ef48512 00007f8100000000
+0x00007f813952b200:   00007f81770fbd78 00007f817700acd8
+0x00007f813952b210:   00007f817700acd8 00007f817700acd8
+0x00007f813952b220:   00007f817620a7c8 00007f8100000000
+0x00007f813952b230:   00007f8100000000 00007f8100000000
+0x00007f813952b240:   0000003000000010 00007f813952b950
+0x00007f813952b250:   00007f813952b870 0000000700000000
+0x00007f813952b260:   0000003000000010 00007f813952b950
+0x00007f813952b270:   00007f813952b880 00007f8178011280 
+
+Instructions: (pc=0x00007f814cd0c0ad)
+0x00007f814cd0c08d:   73 48 48 8b 7b 10 b9 a0 00 00 00 49 8b 14 24 e8
+0x00007f814cd0c09d:   8f fe ff ff 49 89 c5 4d 85 ed 0f 84 d3 04 00 00
+0x00007f814cd0c0ad:   41 0f b6 55 1d 41 0f b6 45 1c 45 31 e4 41 0f b6
+0x00007f814cd0c0bd:   75 0d 41 0f b6 7d 0e 45 0f b6 7d 1f c1 e2 08 09 
+
+Register to memory mapping:
+
+RAX=0x00007f81285577b0 is an unknown value
+RBX=0x00007f814813dba0 is an unknown value
+RCX=0x00007f8128000020 is an unknown value
+RDX=0x00007f81285577b0 is an unknown value
+RSP=0x00007f813952b080 is pointing into the stack for thread: 0x00007f8148646000
+RBP=0x00007f813952b0e0 is pointing into the stack for thread: 0x00007f8148646000
+RSI=0x00000000000002c0 is an unknown value
+RDI=0x00007f8128000020 is an unknown value
+R8 =0x0000000000000003 is an unknown value
+R9 =0x00007f8128000078 is an unknown value
+R10=0x00007f8145086d58 is at entry_point+88 in (nmethod*)0x00007f8145086b90
+R11=0x0000000000000028 is an unknown value
+R12=0x00007f8148182de8 is an unknown value
+R13=0x00007f813b0eaa48 is an unknown value
+R14=0x00007f81285577b0 is an unknown value
+R15=0x000000002c9b7a35 is an unknown value
+
+
+Stack: [0x00007f8139432000,0x00007f8139533000],  sp=0x00007f813952b080,  free space=996k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libzip.so+0x50ad]
+C  [libzip.so+0x5e5d]  ZIP_GetEntry+0xcd
+C  [libzip.so+0x3aa8]  Java_java_util_zip_ZipFile_getEntry+0xa8
+J 74  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007f8145086dce [0x00007f8145086d00+0xce]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 74  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007f8145086d58 [0x00007f8145086d00+0x58]
+J 88 C2 java.util.zip.ZipFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry; (101 bytes) @ 0x00007f8145091188 [0x00007f81450910c0+0xc8]
+J 313 C2 sun.misc.URLClassPath.getResource(Ljava/lang/String;Z)Lsun/misc/Resource; (74 bytes) @ 0x00007f814517e398 [0x00007f814517e2e0+0xb8]
+J 324 C2 java.net.URLClassLoader$1.run()Ljava/lang/Class; (73 bytes) @ 0x00007f8145112f50 [0x00007f8145112d80+0x1d0]
+J 371 C2 java.net.URLClassLoader$1.run()Ljava/lang/Object; (5 bytes) @ 0x00007f81451334d4 [0x00007f81451334a0+0x34]
+v  ~StubRoutines::call_stub
+J 221  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007f81450dd263 [0x00007f81450dd200+0x63]
+J 197 C2 java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class; (29 bytes) @ 0x00007f81450d8294 [0x00007f81450d8200+0x94]
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+70
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+j  org.python.modules._sre.compile(Lorg/python/core/PyString;ILorg/python/core/PyObject;ILorg/python/core/PyObject;Lorg/python/core/PyObject;)Lorg/python/modules/sre/PatternObject;+61
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+57
+j  org.python.core.PyReflectedFunction.__call__(Lorg/python/core/PyObject;[Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+217
+j  org.python.core.PyReflectedFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+43
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.PyObject.__call__(Lorg/python/core/ThreadState;[Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+2
+j  sre_compile$py.compile$13(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+593
+j  sre_compile$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+128
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyBaseCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;[Lorg/python/core/PyObject;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+108
+j  org.python.core.PyFunction.__call__(Lorg/python/core/ThreadState;Lorg/python/core/PyObject;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+19
+j  re$py.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+1435
+j  re$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+104
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.imp.createFromCode(Ljava/lang/String;Lorg/python/core/PyCode;Ljava/lang/String;)Lorg/python/core/PyObject;+99
+j  org.python.core.util.importer.importer_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+76
+j  org.python.modules.zipimport.zipimporter.zipimporter_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+2
+j  org.python.modules.zipimport.zipimporter$zipimporter_load_module_exposer.__call__(Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+11
+j  org.python.core.PyBuiltinMethodNarrow.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+45
+j  org.python.core.imp.loadFromLoader(Lorg/python/core/PyObject;Ljava/lang/String;)Lorg/python/core/PyObject;+24
+j  org.python.core.imp.find_module(Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyList;)Lorg/python/core/PyObject;+224
+j  org.python.core.imp.import_next(Lorg/python/core/PyObject;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+76
+j  org.python.core.imp.import_name(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+136
+j  org.python.core.imp.importName(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+12
+j  org.python.core.ImportFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+107
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.__builtin__.__import__(Ljava/lang/String;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+120
+j  org.python.core.imp.importOneAs(Ljava/lang/String;Lorg/python/core/PyFrame;I)Lorg/python/core/PyObject;+13
+j  string$py.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+543
+j  string$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+180
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.imp.createFromCode(Ljava/lang/String;Lorg/python/core/PyCode;Ljava/lang/String;)Lorg/python/core/PyObject;+99
+j  org.python.core.util.importer.importer_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+76
+j  org.python.modules.zipimport.zipimporter.zipimporter_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+2
+j  org.python.modules.zipimport.zipimporter$zipimporter_load_module_exposer.__call__(Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+11
+j  org.python.core.PyBuiltinMethodNarrow.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+45
+j  org.python.core.imp.loadFromLoader(Lorg/python/core/PyObject;Ljava/lang/String;)Lorg/python/core/PyObject;+24
+j  org.python.core.imp.find_module(Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyList;)Lorg/python/core/PyObject;+224
+j  org.python.core.imp.import_next(Lorg/python/core/PyObject;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+76
+j  org.python.core.imp.import_name(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+136
+j  org.python.core.imp.importName(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+12
+j  org.python.core.ImportFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+107
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.__builtin__.__import__(Ljava/lang/String;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+120
+j  org.python.core.imp.importOne(Ljava/lang/String;Lorg/python/core/PyFrame;I)Lorg/python/core/PyObject;+13
+j  socket$py.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+96
+j  socket$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+752
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.imp.createFromCode(Ljava/lang/String;Lorg/python/core/PyCode;Ljava/lang/String;)Lorg/python/core/PyObject;+99
+j  org.python.core.util.importer.importer_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+76
+j  org.python.modules.zipimport.zipimporter.zipimporter_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+2
+j  org.python.modules.zipimport.zipimporter$zipimporter_load_module_exposer.__call__(Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+11
+j  org.python.core.PyBuiltinMethodNarrow.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+45
+j  org.python.core.imp.loadFromLoader(Lorg/python/core/PyObject;Ljava/lang/String;)Lorg/python/core/PyObject;+24
+j  org.python.core.imp.find_module(Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyList;)Lorg/python/core/PyObject;+224
+j  org.python.core.imp.import_next(Lorg/python/core/PyObject;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+76
+j  org.python.core.imp.import_name(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+136
+j  org.python.core.imp.importName(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+12
+j  org.python.core.ImportFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+107
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.__builtin__.__import__(Ljava/lang/String;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+120
+j  org.python.core.imp.importOne(Ljava/lang/String;Lorg/python/core/PyFrame;I)Lorg/python/core/PyObject;+13
+j  SocketServer$py.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+50
+j  SocketServer$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+216
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.imp.createFromCode(Ljava/lang/String;Lorg/python/core/PyCode;Ljava/lang/String;)Lorg/python/core/PyObject;+99
+j  org.python.core.util.importer.importer_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+76
+j  org.python.modules.zipimport.zipimporter.zipimporter_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+2
+j  org.python.modules.zipimport.zipimporter$zipimporter_load_module_exposer.__call__(Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+11
+j  org.python.core.PyBuiltinMethodNarrow.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+45
+j  org.python.core.imp.loadFromLoader(Lorg/python/core/PyObject;Ljava/lang/String;)Lorg/python/core/PyObject;+24
+j  org.python.core.imp.find_module(Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyList;)Lorg/python/core/PyObject;+224
+j  org.python.core.imp.import_next(Lorg/python/core/PyObject;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+76
+j  org.python.core.imp.import_name(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+136
+j  org.python.core.imp.importName(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+12
+j  org.python.core.ImportFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+107
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.__builtin__.__import__(Ljava/lang/String;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+120
+j  org.python.core.imp.importFromAs(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Lorg/python/core/PyFrame;I)[Lorg/python/core/PyObject;+55
+j  org.python.core.imp.importFrom(Ljava/lang/String;[Ljava/lang/String;Lorg/python/core/PyFrame;I)[Lorg/python/core/PyObject;+5
+j  debugserver$py.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+87
+j  debugserver$py.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+76
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.imp.createFromCode(Ljava/lang/String;Lorg/python/core/PyCode;Ljava/lang/String;)Lorg/python/core/PyObject;+99
+j  org.python.core.util.importer.importer_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+76
+j  org.python.core.ClasspathPyImporter.ClasspathPyImporter_load_module(Ljava/lang/String;)Lorg/python/core/PyObject;+2
+j  org.python.core.ClasspathPyImporter$ClasspathPyImporter_load_module_exposer.__call__(Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+11
+j  org.python.core.PyBuiltinMethodNarrow.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+45
+j  org.python.core.imp.loadFromLoader(Lorg/python/core/PyObject;Ljava/lang/String;)Lorg/python/core/PyObject;+24
+j  org.python.core.imp.find_module(Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyList;)Lorg/python/core/PyObject;+224
+j  org.python.core.imp.import_next(Lorg/python/core/PyObject;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+76
+j  org.python.core.imp.import_name(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+136
+j  org.python.core.imp.importName(Ljava/lang/String;ZLorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+12
+j  org.python.core.ImportFunction.__call__([Lorg/python/core/PyObject;[Ljava/lang/String;)Lorg/python/core/PyObject;+107
+j  org.python.core.PyObject.__call__([Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+5
+j  org.python.core.__builtin__.__import__(Ljava/lang/String;Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;I)Lorg/python/core/PyObject;+120
+j  org.python.core.imp.importFromAs(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Lorg/python/core/PyFrame;I)[Lorg/python/core/PyObject;+55
+j  org.python.core.imp.importFrom(Ljava/lang/String;[Ljava/lang/String;Lorg/python/core/PyFrame;I)[Lorg/python/core/PyObject;+5
+j  org.python.pycode._pyx2.f$0(Lorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+20
+j  org.python.pycode._pyx2.call_function(ILorg/python/core/PyFrame;Lorg/python/core/ThreadState;)Lorg/python/core/PyObject;+24
+j  org.python.core.PyTableCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+129
+j  org.python.core.PyCode.call(Lorg/python/core/ThreadState;Lorg/python/core/PyFrame;)Lorg/python/core/PyObject;+4
+j  org.python.core.Py.runCode(Lorg/python/core/PyCode;Lorg/python/core/PyObject;Lorg/python/core/PyObject;)Lorg/python/core/PyObject;+97
+j  org.python.core.Py.exec(Lorg/python/core/PyObject;Lorg/python/core/PyObject;Lorg/python/core/PyObject;)V+226
+j  org.python.util.PythonInterpreter.exec(Ljava/lang/String;)V+22
+j  net.floodlightcontroller.jython.JythonServer.run()V+143
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f814872c000 JavaThread "ActionDistributor: Thread-12" [_thread_in_native, id=16593, stack(0x00007f8138213000,0x00007f8138314000)]
+  0x00007f8148742000 JavaThread "ActionDistributor: Thread-10" [_thread_in_native, id=16592, stack(0x00007f8138314000,0x00007f8138415000)]
+  0x00007f8148612000 JavaThread "ActionDistributor: Thread-9" [_thread_in_native, id=16591, stack(0x00007f8138415000,0x00007f8138516000)]
+  0x00007f8148750800 JavaThread "FileManager: Thread-8" [_thread_blocked, id=16590, stack(0x00007f8138516000,0x00007f8138617000)]
+  0x00007f814881e000 JavaThread "Topology Updates" [_thread_blocked, id=16589, stack(0x00007f8138725000,0x00007f8138826000)]
+  0x00007f81483e1000 JavaThread "nioEventLoopGroup-2-1" [_thread_in_native, id=16588, stack(0x00007f8138826000,0x00007f8138927000)]
+  0x00007f81280ca000 JavaThread "Scheduled-4" [_thread_blocked, id=16587, stack(0x00007f8138927000,0x00007f8138a28000)]
+  0x00007f81487dd000 JavaThread "Scheduled-3" [_thread_blocked, id=16586, stack(0x00007f8138a28000,0x00007f8138b29000)]
+  0x00007f81487db000 JavaThread "Scheduled-2" [_thread_blocked, id=16585, stack(0x00007f8138b29000,0x00007f8138c2a000)]
+  0x00007f81487df800 JavaThread "Thread-4" [_thread_in_native, id=16584, stack(0x00007f8138d2b000,0x00007f8138e2c000)]
+  0x00007f8128011800 JavaThread "org.python.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=16510, stack(0x00007f8138c2a000,0x00007f8138d2b000)]
+  0x00007f8148613000 JavaThread "SyncMessage-1" [_thread_blocked, id=16506, stack(0x00007f8138e2c000,0x00007f8138f2d000)]
+  0x00007f814874e800 JavaThread "SyncMessage-0" [_thread_blocked, id=16505, stack(0x00007f8138f2d000,0x00007f813902e000)]
+  0x00007f814874c000 JavaThread "HintWorker-1" [_thread_blocked, id=16504, stack(0x00007f813902e000,0x00007f813912f000)]
+  0x00007f81485db000 JavaThread "HintWorker-0" [_thread_blocked, id=16503, stack(0x00007f813912f000,0x00007f8139230000)]
+  0x00007f814875a000 JavaThread "Scheduled-1" [_thread_blocked, id=16502, stack(0x00007f8139230000,0x00007f8139331000)]
+  0x00007f8148758800 JavaThread "Scheduled-0" [_thread_blocked, id=16501, stack(0x00007f8139331000,0x00007f8139432000)]
+=>0x00007f8148646000 JavaThread "MainThread" [_thread_in_native, id=16500, stack(0x00007f8139432000,0x00007f8139533000)]
+  0x00007f81486d4800 JavaThread "Timer-0" daemon [_thread_blocked, id=16499, stack(0x00007f813973c000,0x00007f813983d000)]
+  0x00007f8148111800 JavaThread "Service Thread" daemon [_thread_blocked, id=16492, stack(0x00007f813b419000,0x00007f813b51a000)]
+  0x00007f814810f000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=16491, stack(0x00007f813b51a000,0x00007f813b61b000)]
+  0x00007f814810c000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=16490, stack(0x00007f813b61b000,0x00007f813b71c000)]
+  0x00007f814810a000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16489, stack(0x00007f813b71c000,0x00007f813b81d000)]
+  0x00007f81480df000 JavaThread "Finalizer" daemon [_thread_blocked, id=16488, stack(0x00007f813beff000,0x00007f813c000000)]
+  0x00007f81480dd000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16487, stack(0x00007f8140051000,0x00007f8140152000)]
+  0x00007f814800a800 JavaThread "main" [_thread_blocked, id=16484, stack(0x00007f81500ec000,0x00007f81501ed000)]
+
+Other Threads:
+  0x00007f81480d8800 VMThread [stack: 0x00007f8140152000,0x00007f8140253000] [id=16486]
+  0x00007f814811c000 WatcherThread [stack: 0x00007f813b318000,0x00007f813b419000] [id=16493]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 716800K, used 540823K [0x00000007ce000000, 0x0000000800000000, 0x0000000800000000)
+  eden space 614400K, 88% used [0x00000007ce000000,0x00000007ef025cb0,0x00000007f3800000)
+  from space 102400K, 0% used [0x00000007f9c00000,0x00000007f9c00000,0x0000000800000000)
+  to   space 102400K, 0% used [0x00000007f3800000,0x00000007f3800000,0x00000007f9c00000)
+ ParOldGen       total 1277952K, used 0K [0x0000000780000000, 0x00000007ce000000, 0x00000007ce000000)
+  object space 1277952K, 0% used [0x0000000780000000,0x0000000780000000,0x00000007ce000000)
+ PSPermGen       total 39424K, used 39107K [0x0000000775a00000, 0x0000000778080000, 0x0000000780000000)
+  object space 39424K, 99% used [0x0000000775a00000,0x0000000778030f88,0x0000000778080000)
+
+Card table byte_map: [0x00007f814c8b3000,0x00007f814cd07000] byte_map_base: 0x00007f8148d06000
+
+Polling page: 0x00007f8150206000
+
+Code Cache  [0x00007f8145000000, 0x00007f81454a0000, 0x00007f8148000000)
+ total_blobs=1143 nmethods=722 adapters=374 free_code_cache=44709Kb largest_free_block=45495104
+
+Compilation events (10 events):
+Event: 147.022 Thread 0x00007f814810c000 nmethod 803 0x00007f8145192950 code [0x00007f8145192aa0, 0x00007f8145192b78]
+Event: 147.022 Thread 0x00007f814810c000  804             org.python.objectweb.asm.MethodWriter::a (151 bytes)
+Event: 147.111 Thread 0x00007f814810c000 nmethod 804 0x00007f81452130d0 code [0x00007f8145213260, 0x00007f8145213738]
+Event: 147.111 Thread 0x00007f814810c000  805             org.python.objectweb.asm.ClassWriter::c (39 bytes)
+Event: 147.268 Thread 0x00007f814810c000 nmethod 805 0x00007f81451f1490 code [0x00007f81451f1660, 0x00007f81451f1f58]
+Event: 147.302 Thread 0x00007f814810c000  806             org.python.compiler.Code::iconst (144 bytes)
+Event: 147.696 Thread 0x00007f814810c000 nmethod 806 0x00007f814520bb10 code [0x00007f814520bde0, 0x00007f814520d230]
+Event: 147.696 Thread 0x00007f814810c000  807             org.python.objectweb.asm.ByteVector::putShort (52 bytes)
+Event: 147.753 Thread 0x00007f814810c000 nmethod 807 0x00007f8145213c90 code [0x00007f8145213de0, 0x00007f8145214158]
+Event: 147.753 Thread 0x00007f814810c000  808             org.python.objectweb.asm.MethodWriter::b (270 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 66.533 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f81451a5438 method=org.python.core.PyTuple.<init>(Lorg/python/core/PyType;[Lorg/python/core/PyObject;)V @ 11
+Event: 71.687 Thread 0x00007f8148646000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f81451a47f8 method=org.python.google.common.collect.CustomConcurrentHashMap.hash(Ljava/lang/Object;)I @ 8
+Event: 95.438 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f81452fb320 method=org.python.antlr.PythonParser.term()Lorg/python/antlr/PythonParser$term_return; @ 300
+Event: 104.055 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f814532b940 method=org.python.antlr.PythonParser.trailer(Lorg/python/antlr/runtime/Token;Lorg/python/antlr/PythonTree;)Lorg/python/antlr/PythonParser$trailer_return; @ 416
+Event: 114.083 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f814535d3d8 method=org.python.antlr.PythonParser.expr(Lorg/python/antlr/ast/expr_contextType;)Lorg/python/antlr/PythonParser$expr_return; @ 192
+Event: 115.178 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f814519ded4 method=org.python.objectweb.asm.Item.a(Lorg/python/objectweb/asm/Item;)Z @ 239
+Event: 118.356 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f814510cce0 method=org.python.antlr.runtime.BaseRecognizer.pushFollow(Lorg/python/antlr/runtime/BitSet;)V @ 17
+Event: 119.207 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f814513129c method=org.python.objectweb.asm.ByteVector.putUTF8(Ljava/lang/String;)Lorg/python/objectweb/asm/ByteVector; @ 80
+Event: 130.723 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f8145212e00 method=java.lang.Long.getChars(JI[C)V @ 24
+Event: 143.252 Thread 0x00007f8148646000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f81452ca4cc method=org.python.antlr.PythonParser.atom()Lorg/python/antlr/PythonParser$atom_return; @ 4021
+
+Internal exceptions (10 events):
+Event: 112.563 Thread 0x00007f8148646000 Threw 0x00000007ea865fe8 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+Event: 116.228 Thread 0x00007f814875a000 Threw 0x00000007da0d6ae0 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jni.cpp:721
+Event: 126.234 Thread 0x00007f81487dd000 Threw 0x00000007d946af60 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jni.cpp:721
+Event: 133.791 Thread 0x00007f8148646000 Threw 0x00000007eca54d88 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+Event: 133.968 Thread 0x00007f8148646000 Threw 0x00000007eca58bb0 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+Event: 136.235 Thread 0x00007f81280ca000 Threw 0x00000007d885b540 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jni.cpp:721
+Event: 141.105 Thread 0x00007f8148646000 Threw 0x00000007ed0bb320 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+Event: 141.138 Thread 0x00007f8148646000 Threw 0x00000007ed0d1300 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+Event: 146.239 Thread 0x00007f8148758800 Threw 0x00000007d35b6ce8 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jni.cpp:721
+Event: 151.012 Thread 0x00007f8148646000 Threw 0x00000007ee7929b8 at /build/openjdk-7-FPfzvW/openjdk-7-7u181-2.6.14/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1369
+
+Events (10 events):
+Event: 141.953 Thread 0x00007f814810f000 flushing nmethod 0x00007f814511db10
+Event: 141.953 Thread 0x00007f814810f000 flushing nmethod 0x00007f814512ae90
+Event: 143.083 Thread 0x00007f814810c000 flushing nmethod 0x00007f814520f4d0
+Event: 143.083 Thread 0x00007f814810c000 flushing nmethod 0x00007f8145225690
+Event: 143.252 Thread 0x00007f8148646000 Uncommon trap: trap_request=0xffffff75 fr.pc=0x00007f81452ca4cc
+Event: 143.252 Thread 0x00007f8148646000 DEOPT PACKING pc=0x00007f81452ca4cc sp=0x00007f813952bef0
+Event: 143.252 Thread 0x00007f8148646000 DEOPT UNPACKING pc=0x00007f8145039445 sp=0x00007f813952bcb8 mode 2
+Event: 146.951 Thread 0x00007f814810c000 flushing nmethod 0x00007f8145192690
+Event: 151.012 loading class 0x00007f81285bbb50
+Event: 151.012 loading class 0x00007f81285bbb50 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 1327896                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 08:01 1327896                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 08:01 1327896                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+01328000-01349000 rw-p 00000000 00:00 0                                  [heap]
+775a00000-778080000 rw-p 00000000 00:00 0 
+778080000-780000000 rw-p 00000000 00:00 0 
+780000000-800000000 rw-p 00000000 00:00 0 
+7f8120000000-7f81228c8000 rw-p 00000000 00:00 0 
+7f81228c8000-7f8124000000 ---p 00000000 00:00 0 
+7f8124000000-7f8127192000 rw-p 00000000 00:00 0 
+7f8127192000-7f8128000000 ---p 00000000 00:00 0 
+7f8128000000-7f8128724000 rw-p 00000000 00:00 0 
+7f8128724000-7f812c000000 ---p 00000000 00:00 0 
+7f812c000000-7f812c021000 rw-p 00000000 00:00 0 
+7f812c021000-7f8130000000 ---p 00000000 00:00 0 
+7f8130000000-7f8130021000 rw-p 00000000 00:00 0 
+7f8130021000-7f8134000000 ---p 00000000 00:00 0 
+7f8134000000-7f8134024000 rw-p 00000000 00:00 0 
+7f8134024000-7f8138000000 ---p 00000000 00:00 0 
+7f8138213000-7f8138216000 ---p 00000000 00:00 0 
+7f8138216000-7f8138314000 rw-p 00000000 00:00 0 
+7f8138314000-7f8138317000 ---p 00000000 00:00 0 
+7f8138317000-7f8138415000 rw-p 00000000 00:00 0 
+7f8138415000-7f8138418000 ---p 00000000 00:00 0 
+7f8138418000-7f8138516000 rw-p 00000000 00:00 0 
+7f8138516000-7f8138519000 ---p 00000000 00:00 0 
+7f8138519000-7f8138617000 rw-p 00000000 00:00 0 
+7f8138617000-7f8138624000 r-xp 00000000 08:01 1595824                    /tmp/jffi3623793435001544249.tmp
+7f8138624000-7f8138724000 ---p 0000d000 08:01 1595824                    /tmp/jffi3623793435001544249.tmp
+7f8138724000-7f8138725000 rw-p 0000d000 08:01 1595824                    /tmp/jffi3623793435001544249.tmp
+7f8138725000-7f8138728000 ---p 00000000 00:00 0 
+7f8138728000-7f8138826000 rw-p 00000000 00:00 0 
+7f8138826000-7f8138829000 ---p 00000000 00:00 0 
+7f8138829000-7f8138927000 rw-p 00000000 00:00 0 
+7f8138927000-7f813892a000 ---p 00000000 00:00 0 
+7f813892a000-7f8138a28000 rw-p 00000000 00:00 0 
+7f8138a28000-7f8138a2b000 ---p 00000000 00:00 0 
+7f8138a2b000-7f8138b29000 rw-p 00000000 00:00 0 
+7f8138b29000-7f8138b2c000 ---p 00000000 00:00 0 
+7f8138b2c000-7f8138c2a000 rw-p 00000000 00:00 0 
+7f8138c2a000-7f8138c2d000 ---p 00000000 00:00 0 
+7f8138c2d000-7f8138d2b000 rw-p 00000000 00:00 0 
+7f8138d2b000-7f8138d2e000 ---p 00000000 00:00 0 
+7f8138d2e000-7f8138e2c000 rw-p 00000000 00:00 0 
+7f8138e2c000-7f8138e2f000 ---p 00000000 00:00 0 
+7f8138e2f000-7f8138f2d000 rw-p 00000000 00:00 0 
+7f8138f2d000-7f8138f30000 ---p 00000000 00:00 0 
+7f8138f30000-7f813902e000 rw-p 00000000 00:00 0 
+7f813902e000-7f8139031000 ---p 00000000 00:00 0 
+7f8139031000-7f813912f000 rw-p 00000000 00:00 0 
+7f813912f000-7f8139132000 ---p 00000000 00:00 0 
+7f8139132000-7f8139230000 rw-p 00000000 00:00 0 
+7f8139230000-7f8139233000 ---p 00000000 00:00 0 
+7f8139233000-7f8139331000 rw-p 00000000 00:00 0 
+7f8139331000-7f8139334000 ---p 00000000 00:00 0 
+7f8139334000-7f8139432000 rw-p 00000000 00:00 0 
+7f8139432000-7f8139435000 ---p 00000000 00:00 0 
+7f8139435000-7f8139533000 rw-p 00000000 00:00 0 
+7f8139533000-7f813953b000 r-xp 00000000 08:01 1327927                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f813953b000-7f813973a000 ---p 00008000 08:01 1327927                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f813973a000-7f813973b000 r--p 00007000 08:01 1327927                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f813973b000-7f813973c000 rw-p 00008000 08:01 1327927                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f813973c000-7f813973f000 ---p 00000000 00:00 0 
+7f813973f000-7f813983d000 rw-p 00000000 00:00 0 
+7f813983d000-7f813984d000 r-xp 00000000 08:01 1327902                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f813984d000-7f8139a4d000 ---p 00010000 08:01 1327902                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8139a4d000-7f8139a4e000 r--p 00010000 08:01 1327902                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8139a4e000-7f8139a4f000 rw-p 00011000 08:01 1327902                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8139a4f000-7f8139a8c000 r-xp 00000000 08:01 1053727                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f8139a8c000-7f8139c8b000 ---p 0003d000 08:01 1053727                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f8139c8b000-7f8139c8c000 r--p 0003c000 08:01 1053727                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f8139c8c000-7f8139c8d000 rw-p 0003d000 08:01 1053727                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f8139c8d000-7f8139c94000 r-xp 00000000 08:01 1321387                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f8139c94000-7f8139e93000 ---p 00007000 08:01 1321387                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f8139e93000-7f8139e94000 r--p 00006000 08:01 1321387                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f8139e94000-7f8139e95000 rw-p 00007000 08:01 1321387                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f8139e95000-7f8139eac000 r-xp 00000000 08:01 1053750                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f8139eac000-7f813a0ac000 ---p 00017000 08:01 1053750                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f813a0ac000-7f813a0ad000 r--p 00017000 08:01 1053750                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f813a0ad000-7f813a0ae000 rw-p 00018000 08:01 1053750                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f813a0ae000-7f813a0b0000 rw-p 00000000 00:00 0 
+7f813a0b0000-7f813a0d0000 r-xp 00000000 08:01 1053754                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f813a0d0000-7f813a2cf000 ---p 00020000 08:01 1053754                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f813a2cf000-7f813a2d0000 r--p 0001f000 08:01 1053754                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f813a2d0000-7f813a2d1000 rw-p 00020000 08:01 1053754                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f813a2d1000-7f813a2d3000 rw-p 00000000 00:00 0 
+7f813a2d3000-7f813a2d6000 r-xp 00000000 08:01 1321500                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f813a2d6000-7f813a4d5000 ---p 00003000 08:01 1321500                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f813a4d5000-7f813a4d6000 r--p 00002000 08:01 1321500                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f813a4d6000-7f813a4d7000 rw-p 00003000 08:01 1321500                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f813a4d7000-7f813a5dd000 r-xp 00000000 08:01 1053655                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f813a5dd000-7f813a7dc000 ---p 00106000 08:01 1053655                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f813a7dc000-7f813a7dd000 r--p 00105000 08:01 1053655                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f813a7dd000-7f813a7de000 rw-p 00106000 08:01 1053655                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f813a7de000-7f813a7df000 rw-p 00000000 00:00 0 
+7f813a7df000-7f813a82e000 r-xp 00000000 08:01 1321516                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f813a82e000-7f813aa2e000 ---p 0004f000 08:01 1321516                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f813aa2e000-7f813aa2f000 r--p 0004f000 08:01 1321516                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f813aa2f000-7f813aa30000 rw-p 00050000 08:01 1321516                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f813aa30000-7f813ab9c000 r-xp 00000000 08:01 1321488                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f813ab9c000-7f813ad9b000 ---p 0016c000 08:01 1321488                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f813ad9b000-7f813ad9f000 r--p 0016b000 08:01 1321488                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f813ad9f000-7f813ada1000 rw-p 0016f000 08:01 1321488                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f813ada1000-7f813ada3000 rw-p 00000000 00:00 0 
+7f813ada3000-7f813adbb000 r-xp 00000000 08:01 1327907                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f813adbb000-7f813afba000 ---p 00018000 08:01 1327907                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f813afba000-7f813afbb000 r--p 00017000 08:01 1327907                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f813afbb000-7f813afbc000 rw-p 00018000 08:01 1327907                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f813afbc000-7f813b318000 r--s 02cb7000 08:01 930839                     /home/student/Downloads/floodlight-1.2/target/floodlight.jar
+7f813b318000-7f813b319000 ---p 00000000 00:00 0 
+7f813b319000-7f813b419000 rw-p 00000000 00:00 0 
+7f813b419000-7f813b41c000 ---p 00000000 00:00 0 
+7f813b41c000-7f813b51a000 rw-p 00000000 00:00 0 
+7f813b51a000-7f813b51d000 ---p 00000000 00:00 0 
+7f813b51d000-7f813b61b000 rw-p 00000000 00:00 0 
+7f813b61b000-7f813b61e000 ---p 00000000 00:00 0 
+7f813b61e000-7f813b71c000 rw-p 00000000 00:00 0 
+7f813b71c000-7f813b71f000 ---p 00000000 00:00 0 
+7f813b71f000-7f813b81d000 rw-p 00000000 00:00 0 
+7f813b81d000-7f813beff000 r--p 00000000 08:01 1318920                    /usr/lib/locale/locale-archive
+7f813beff000-7f813bf02000 ---p 00000000 00:00 0 
+7f813bf02000-7f813c000000 rw-p 00000000 00:00 0 
+7f813c000000-7f813c021000 rw-p 00000000 00:00 0 
+7f813c021000-7f8140000000 ---p 00000000 00:00 0 
+7f8140018000-7f814001b000 ---p 00000000 00:00 0 
+7f814001b000-7f8140051000 rw-p 00000000 00:00 0 
+7f8140051000-7f8140054000 ---p 00000000 00:00 0 
+7f8140054000-7f8140152000 rw-p 00000000 00:00 0 
+7f8140152000-7f8140153000 ---p 00000000 00:00 0 
+7f8140153000-7f81408a3000 rw-p 00000000 00:00 0 
+7f81408a3000-7f8140a5a000 r--s 01d7e000 08:01 1327941                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7f8140a5a000-7f8145000000 rw-p 00000000 00:00 0 
+7f8145000000-7f81454a0000 rwxp 00000000 00:00 0 
+7f81454a0000-7f81488d9000 rw-p 00000000 00:00 0 
+7f81488d9000-7f814c000000 ---p 00000000 00:00 0 
+7f814c00e000-7f814c015000 r--s 00000000 08:01 1574298                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f814c015000-7f814c4ef000 rw-p 00000000 00:00 0 
+7f814c4ef000-7f814c4f0000 ---p 00000000 00:00 0 
+7f814c4f0000-7f814c604000 rw-p 00000000 00:00 0 
+7f814c604000-7f814c643000 rw-p 00000000 00:00 0 
+7f814c643000-7f814c8c7000 rw-p 00000000 00:00 0 
+7f814c8c7000-7f814c906000 rw-p 00000000 00:00 0 
+7f814c906000-7f814cd07000 rw-p 00000000 00:00 0 
+7f814cd07000-7f814cd0f000 r-xp 00000000 08:01 1327929                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f814cd0f000-7f814cf0e000 ---p 00008000 08:01 1327929                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f814cf0e000-7f814cf0f000 r--p 00007000 08:01 1327929                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f814cf0f000-7f814cf10000 rw-p 00008000 08:01 1327929                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f814cf10000-7f814cf1a000 r-xp 00000000 08:01 1053699                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f814cf1a000-7f814d119000 ---p 0000a000 08:01 1053699                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f814d119000-7f814d11a000 r--p 00009000 08:01 1053699                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f814d11a000-7f814d11b000 rw-p 0000a000 08:01 1053699                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f814d11b000-7f814d126000 r-xp 00000000 08:01 1053709                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f814d126000-7f814d325000 ---p 0000b000 08:01 1053709                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f814d325000-7f814d326000 r--p 0000a000 08:01 1053709                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f814d326000-7f814d327000 rw-p 0000b000 08:01 1053709                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f814d327000-7f814d33e000 r-xp 00000000 08:01 1053693                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f814d33e000-7f814d53d000 ---p 00017000 08:01 1053693                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f814d53d000-7f814d53e000 r--p 00016000 08:01 1053693                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f814d53e000-7f814d53f000 rw-p 00017000 08:01 1053693                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f814d53f000-7f814d541000 rw-p 00000000 00:00 0 
+7f814d541000-7f814d54a000 r-xp 00000000 08:01 1053695                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f814d54a000-7f814d749000 ---p 00009000 08:01 1053695                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f814d749000-7f814d74a000 r--p 00008000 08:01 1053695                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f814d74a000-7f814d74b000 rw-p 00009000 08:01 1053695                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f814d74b000-7f814d775000 r-xp 00000000 08:01 1327930                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f814d775000-7f814d975000 ---p 0002a000 08:01 1327930                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f814d975000-7f814d976000 r--p 0002a000 08:01 1327930                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f814d976000-7f814d978000 rw-p 0002b000 08:01 1327930                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f814d978000-7f814d988000 r-xp 00000000 08:01 1327937                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f814d988000-7f814db87000 ---p 00010000 08:01 1327937                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f814db87000-7f814db89000 r--p 0000f000 08:01 1327937                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f814db89000-7f814db8a000 rw-p 00011000 08:01 1327937                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f814db8a000-7f814db91000 r-xp 00000000 08:01 1053752                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f814db91000-7f814dd90000 ---p 00007000 08:01 1053752                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f814dd90000-7f814dd91000 r--p 00006000 08:01 1053752                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f814dd91000-7f814dd92000 rw-p 00007000 08:01 1053752                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f814dd92000-7f814dda8000 r-xp 00000000 08:01 1053651                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f814dda8000-7f814dfa7000 ---p 00016000 08:01 1053651                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f814dfa7000-7f814dfa8000 rw-p 00015000 08:01 1053651                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f814dfa8000-7f814e0ad000 r-xp 00000000 08:01 1053674                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f814e0ad000-7f814e2ac000 ---p 00105000 08:01 1053674                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f814e2ac000-7f814e2ad000 r--p 00104000 08:01 1053674                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f814e2ad000-7f814e2ae000 rw-p 00105000 08:01 1053674                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f814e2ae000-7f814e394000 r-xp 00000000 08:01 1310899                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f814e394000-7f814e593000 ---p 000e6000 08:01 1310899                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f814e593000-7f814e59b000 r--p 000e5000 08:01 1310899                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f814e59b000-7f814e59d000 rw-p 000ed000 08:01 1310899                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7f814e59d000-7f814e5b2000 rw-p 00000000 00:00 0 
+7f814e5b2000-7f814f0eb000 r-xp 00000000 08:01 1327911                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f814f0eb000-7f814f2eb000 ---p 00b39000 08:01 1327911                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f814f2eb000-7f814f386000 r--p 00b39000 08:01 1327911                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f814f386000-7f814f3a9000 rw-p 00bd4000 08:01 1327911                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f814f3a9000-7f814f3d9000 rw-p 00000000 00:00 0 
+7f814f3d9000-7f814f3f1000 r-xp 00000000 08:01 1053787                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f814f3f1000-7f814f5f0000 ---p 00018000 08:01 1053787                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f814f5f0000-7f814f5f1000 r--p 00017000 08:01 1053787                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f814f5f1000-7f814f5f2000 rw-p 00018000 08:01 1053787                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f814f5f2000-7f814f60b000 r-xp 00000000 08:01 1053744                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f814f60b000-7f814f80a000 ---p 00019000 08:01 1053744                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f814f80a000-7f814f80b000 r--p 00018000 08:01 1053744                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f814f80b000-7f814f80c000 rw-p 00019000 08:01 1053744                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f814f80c000-7f814f810000 rw-p 00000000 00:00 0 
+7f814f810000-7f814f813000 r-xp 00000000 08:01 1053641                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f814f813000-7f814fa12000 ---p 00003000 08:01 1053641                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f814fa12000-7f814fa13000 r--p 00002000 08:01 1053641                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f814fa13000-7f814fa14000 rw-p 00003000 08:01 1053641                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f814fa14000-7f814fbce000 r-xp 00000000 08:01 1053624                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f814fbce000-7f814fdce000 ---p 001ba000 08:01 1053624                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f814fdce000-7f814fdd2000 r--p 001ba000 08:01 1053624                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f814fdd2000-7f814fdd4000 rw-p 001be000 08:01 1053624                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f814fdd4000-7f814fdd9000 rw-p 00000000 00:00 0 
+7f814fdd9000-7f814fde6000 r-xp 00000000 08:01 1327934                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f814fde6000-7f814ffe5000 ---p 0000d000 08:01 1327934                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f814ffe5000-7f814ffe6000 r--p 0000c000 08:01 1327934                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f814ffe6000-7f814ffe7000 rw-p 0000d000 08:01 1327934                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f814ffe7000-7f815000a000 r-xp 00000000 08:01 1053600                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f815000f000-7f8150013000 r--s 00053000 08:01 1327969                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+7f8150013000-7f8150016000 r--s 00018000 08:01 1327983                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+7f8150016000-7f8150020000 r--s 000b0000 08:01 1327942                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+7f8150020000-7f8150024000 r--s 00036000 08:01 1327963                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f8150024000-7f8150028000 r--s 00085000 08:01 1327966                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+7f8150028000-7f815002c000 r--s 0003d000 08:01 1327968                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f815002c000-7f815003f000 rw-p 00000000 00:00 0 
+7f815003f000-7f81500ec000 rw-p 00000000 00:00 0 
+7f81500ec000-7f81500ef000 ---p 00000000 00:00 0 
+7f81500ef000-7f81501f2000 rw-p 00000000 00:00 0 
+7f81501f3000-7f81501f4000 rw-p 00000000 00:00 0 
+7f81501f4000-7f81501f5000 r--p 00000000 00:00 0 
+7f81501f5000-7f81501f7000 r--s 00012000 08:01 1327964                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f81501f7000-7f81501fa000 r--s 0000f000 08:01 1327965                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f81501fa000-7f81501fb000 r--s 00002000 08:01 1327967                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f81501fb000-7f81501fd000 r--s 00006000 08:01 1593533                    /usr/share/java/java-atk-wrapper.jar
+7f81501fd000-7f8150205000 rw-s 00000000 08:01 1595819                    /tmp/hsperfdata_student/16483
+7f8150205000-7f8150206000 rw-p 00000000 00:00 0 
+7f8150206000-7f8150207000 r--p 00000000 00:00 0 
+7f8150207000-7f8150209000 rw-p 00000000 00:00 0 
+7f8150209000-7f815020a000 r--p 00022000 08:01 1053600                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f815020a000-7f815020b000 rw-p 00023000 08:01 1053600                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f815020b000-7f815020c000 rw-p 00000000 00:00 0 
+7ffd9fa96000-7ffd9fab7000 rw-p 00000000 00:00 0                          [stack]
+7ffd9fb3f000-7ffd9fb41000 r--p 00000000 00:00 0                          [vvar]
+7ffd9fb41000-7ffd9fb43000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx2g -Xms2g -Xmn800m -XX:+UseParallelGC -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -XX:MaxInlineSize=8192 -XX:FreqInlineSize=8192 -XX:CompileThreshold=1500 -XX:PreBlockSpin=8 -Dpython.security.respectJavaAccessibility=false -Dlogback.configurationFile=./logback.xml 
+java_command: ./target/floodlight.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x967710], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x967710], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x7d9170], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x7d9170], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x7d9170], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x7d9170], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7d92a0], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x7d91f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x7d91f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x7d91f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x7d91f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTRAP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 14.04 (trusty)
+uname:Linux 4.4.0-31-generic #50~14.04.1-Ubuntu SMP Wed Jul 13 01:07:32 UTC 2016 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 15651, NOFILE 4096, AS infinity
+load average:5.32 2.59 1.11
+
+/proc/meminfo:
+MemTotal:        4029044 kB
+MemFree:          164184 kB
+MemAvailable:    1724784 kB
+Buffers:          124172 kB
+Cached:          1618588 kB
+SwapCached:            0 kB
+Active:          2027604 kB
+Inactive:        1354060 kB
+Active(anon):    1171116 kB
+Inactive(anon):   508900 kB
+Active(file):     856488 kB
+Inactive(file):   845160 kB
+Unevictable:        7332 kB
+Mlocked:            7332 kB
+SwapTotal:       4191228 kB
+SwapFree:        4188872 kB
+Dirty:              3760 kB
+Writeback:             0 kB
+AnonPages:       1646280 kB
+Mapped:           316644 kB
+Shmem:             34668 kB
+Slab:             174204 kB
+SReclaimable:     128112 kB
+SUnreclaim:        46092 kB
+KernelStack:       10592 kB
+PageTables:        31896 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6205748 kB
+Committed_AS:    6061636 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    827392 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      124736 kB
+DirectMap2M:     4069376 kB
+
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+stepping	: 7
+microcode	: 0x2d
+cpu MHz		: 2401.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx hypervisor lahf_lm epb tsc_adjust dtherm ida arat pln pts
+bugs		:
+bogomips	: 4802.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 42 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4029044k(164184k free), swap 4191228k(4188872k free)
+
+vm_info: OpenJDK 64-Bit Server VM (24.181-b01) for linux-amd64 JRE (1.7.0_181-b01), built on Nov 13 2018 21:03:02 by "buildd" with gcc 4.8.4
+
+time: Mon Jan 21 09:23:41 2019
+elapsed time: 151 seconds
+
